@@ -5,7 +5,7 @@ exports.postArray = [
     body("fullName").isAlpha().withMessage("full Name must be String"),
     body("password").isStrongPassword().withMessage("password needs to have numbers,capital,small and symbol"),
     body("email").isEmail().withMessage("Email must be like xx@xx.xx"),
-    // body("image").isString().withMessage("image must be string")
+    body("image").isString().optional().withMessage("image must be string")
 
 ];
 exports.patchArray = [
